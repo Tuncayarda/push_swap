@@ -1,5 +1,5 @@
 NAME = push_swap
-CC = cc
+CC = cc -g
 MAKEFLAGS += --no-print-directory
 CFLAGS = #-Wall -Wextra -Werror
 LIBFT = libs/libft/libft.a

@@ -6,34 +6,53 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/11/30 21:17:19 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/04 20:31:34 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main()
+int main(int ac, char *args[])
 {
-	t_list *a;
-	t_list *b;
-
-	int nums[5] = {1, 2, 3, 4, 5};
-	a = ft_lstnew(&nums[0]);
-
-	ft_lstadd_back(&a, ft_lstnew(&nums[1]));
-	ft_lstadd_back(&a, ft_lstnew(&nums[2]));
-	ft_lstadd_back(&a, ft_lstnew(&nums[3]));
-	ft_lstadd_back(&a, ft_lstnew(&nums[4]));
-
+	t_stack *a;
+	t_stack *b;	
+	t_stack	*tmp;
 	
-	sa(&a);
-	ft_printf("%d\n", *(int *)(a->content));
-	a = a->next;
-	ft_printf("%d\n", *(int *)(a->content));
-	a = a->next;
-	ft_printf("%d\n", *(int *)(a->content));
-	a = a->next;
-	ft_printf("%d\n", *(int *)(a->content));
-	a = a->next;
-	ft_printf("%d\n", *(int *)(a->content));
+	
+	a = read_stack(args[1]);
+	b = read_stack(args[2]);
+	ft_printf("--A--\n");
+	tmp = a;
+	if (tmp)
+		for (int i = 0; i < stack_size(a); i++)
+		{
+			ft_printf("%d %d\n",i, tmp->val);
+			tmp = tmp->next;
+		}
+	ft_printf("--B--\n");
+	tmp = b;
+	if (tmp)
+		for (int i = 0; i < stack_size(b); i++)
+		{
+			ft_printf("%d %d\n",i, tmp->val);
+			tmp = tmp->next;
+		}
+	
+	rra(&a);
+	ft_printf("--A--\n");
+	tmp = a;
+	if (tmp)
+		for (int i = 0; i < stack_size(a); i++)
+		{
+			ft_printf("%d %d\n",i, tmp->val);
+			tmp = tmp->next;
+		}
+	ft_printf("--B--\n");
+	tmp = b;
+	if (tmp)
+		for (int i = 0; i < stack_size(b); i++)
+		{
+			ft_printf("%d %d\n",i, tmp->val);
+			tmp = tmp->next;
+		}
 }
