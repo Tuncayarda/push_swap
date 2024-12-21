@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:32:29 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/04 19:57:11 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/21 19:57:30 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_stack	*stack_new(int val)
 
 t_stack	*stacklast(t_stack *stack)
 {
-	t_stack *l_ptr;
+	t_stack	*l_ptr;
 
 	if (!stack)
 		return (NULL);

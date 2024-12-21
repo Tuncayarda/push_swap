@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/04 20:31:34 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/21 20:03:02 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main(int ac, char *args[])
 			tmp = tmp->next;
 		}
 	
-	rra(&a);
+	rrr(&a, &b);
 	ft_printf("--A--\n");
 	tmp = a;
 	if (tmp)

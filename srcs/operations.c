@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 13:57:39 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/04 20:00:17 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/21 19:57:09 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	sa(t_stack **stack, int msg)
 {
-	t_stack *first;
-	t_stack *second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!stack || !(*stack) || !(*stack)->next)
 		return ;
@@ -30,8 +30,8 @@ void	sa(t_stack **stack, int msg)
 
 void	sb(t_stack **stack, int msg)
 {
-	t_stack *first;
-	t_stack *second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (!stack || !(*stack) || !(*stack)->next)
 		return ;

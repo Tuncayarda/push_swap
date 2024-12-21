@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 20:08:23 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/04 20:21:28 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/21 19:58:22 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	ra(t_stack **stack, int msg)
 {
-	t_stack *first;
+	t_stack	*first;
 	t_stack	*last;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	first = *stack;
 	*stack = (*stack)->next;
-	
 	last = stacklast(*stack);
 	last->next = first;
 	first->next = NULL;
@@ -31,14 +30,13 @@ void	ra(t_stack **stack, int msg)
 
 void	rb(t_stack **stack, int msg)
 {
-	t_stack *first;
+	t_stack	*first;
 	t_stack	*last;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	first = *stack;
 	*stack = (*stack)->next;
-	
 	last = stacklast(*stack);
 	last->next = first;
 	first->next = NULL;
