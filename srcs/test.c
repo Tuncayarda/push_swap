@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/25 16:15:09 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/25 16:38:25 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,5 @@ int main(int ac, char *args[])
 			tmp = tmp->next;
 		}
 	
-	ft_printf("--A--\n");
-	tmp = a;
-	if (tmp)
-		for (int i = 0; i < stack_size(a); i++)
-		{
-			ft_printf("%d %d\n",i, tmp->val);
-			tmp = tmp->next;
-		}
-
+	stack_free(&a);
 }

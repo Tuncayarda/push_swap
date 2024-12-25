@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 13:45:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/25 16:34:43 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/25 16:37:55 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ void	stack_add_back(t_stack **stack, t_stack *new);
 void	stack_add_front(t_stack **stack, t_stack *new);
 int		stack_size(t_stack *stack);
 t_stack	*stack_pop(t_stack **stack);
+void	stack_free(t_stack **stack);
 #endif

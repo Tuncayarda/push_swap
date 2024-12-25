@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 15:50:50 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/25 16:35:15 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/25 16:40:33 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,15 @@ t_stack	*ps_parse(int ac, char **args)
 	rtn = NULL;
 	while (arg < ac)
 	{
-		if (ft_strchr(args[arg], ' '))
+		i = 0;
+		values = ft_split(args[arg], ' ');
+		while (values[i])
 		{
-			i = 0;
-			values = ft_split(args[arg], ' ');
-			while (values[i])
-			{
-				stack_add_back(&rtn, stack_new(ft_atoi(values[i])));
-				i++;
-			}
-			free (values);
+			stack_add_back(&rtn, stack_new(ft_atoi(values[i])));
+			free(values[i]);
+			i++;
 		}
-		else if (is_numeric(args[arg]))
-			stack_add_back(&rtn, stack_new(ft_atoi(args[arg])));
+		free (values);
 		arg++;
 	}
 	return (rtn);
