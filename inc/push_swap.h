@@ -6,13 +6,14 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 13:45:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/21 20:03:31 by tuaydin          ###   ########.fr       */
+/*   Updated: 2024/12/25 16:34:43 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <stdarg.h>
 # include "libft.h"
 # include "ft_printf.h"
 
@@ -34,7 +35,7 @@ void	rra(t_stack **stack, int msg);
 void	rrb(t_stack **stack, int msg);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 
-t_stack	*read_stack(char *arg);
+t_stack	*ps_parse(int ac, char **args);
 t_stack	*stack_new(int val);
 t_stack	*stacklast(t_stack *stack);
 void	stack_add_back(t_stack **stack, t_stack *new);

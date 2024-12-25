@@ -1,7 +1,7 @@
 NAME = push_swap
 CC = cc -g
 MAKEFLAGS += --no-print-directory
-CFLAGS = #-Wall -Wextra -Werror
+CFLAGS = -fsanitize=undefined -g #-Wall -Wextra -Werror
 LIBFT = libs/libft/libft.a
 PRINTF = libs/ft_printf/libftprintf.a
 
