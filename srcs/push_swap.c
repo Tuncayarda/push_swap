@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/04 15:39:21 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 17:27:33 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,7 @@ int main(int ac, char *args[])
 	a = ps_parse(ac, args);
 	b = NULL;
 
-	ft_printf("--------A--------\n");
+	sort_five(&a, &b);
 	tmp = a;
-	if (tmp)
-		for (int i = 0; i < stack_size(a); i++)
-		{
-			ft_printf("%d %d\n",i, tmp->val);
-			tmp = tmp->next;
-		}
-	ft_printf("SORTED: %d\n", is_sorted(a));
-	
-	sort_three(&a);
-
-	ft_printf("SORTED: %d\n", is_sorted(a));
-	tmp = a;
-	if (tmp)
-		for (int i = 0; i < stack_size(a); i++)
-		{
-			ft_printf("%d %d\n",i, tmp->val);
-			tmp = tmp->next;
-		}
 	stack_free(&a);
 }
