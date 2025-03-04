@@ -52,7 +52,6 @@ void	sort_three(t_stack **stack);
 void	sort_four(t_stack **stack, t_stack **stack_b);
 void	sort_five(t_stack **stack, t_stack **stack_b);
 
-
 void	sort_radix(t_stack **stack_a, t_stack **stack_b);
 
 #endif

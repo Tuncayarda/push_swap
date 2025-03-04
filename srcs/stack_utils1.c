@@ -36,16 +36,23 @@ void	stack_free(t_stack **stack)
 void	set_idx(t_stack **stack)
 {
 	t_stack	*current;
-	int		idx;
+	t_stack	*other;
+	int		index;
 
 	if (!stack || !(*stack))
-		return;
+		return ;
 	current = *stack;
-	idx = 0;
 	while (current)
 	{
-		current->idx = idx;
-		idx++;
+		index = 0;
+		other = *stack;
+		while (other)
+		{
+			if (other->val < current->val)
+				index++;
+			other = other->next;
+		}
+		current->idx = index;
 		current = current->next;
 	}
 }
