@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 13:45:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/04 17:58:32 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 21:15:15 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,7 @@ void	sort_four(t_stack **stack, t_stack **stack_b);
 void	sort_five(t_stack **stack, t_stack **stack_b);
 
 void	sort_radix(t_stack **stack_a, t_stack **stack_b);
+
+void    check_errors(int ac, char **args);
 
 #endif

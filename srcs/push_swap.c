@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/04 18:17:19 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 21:26:47 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	main(int ac, char *args[])
 	t_stack	*b;
 	t_stack	*tmp;
 
+	check_errors(ac, args);
 	a = ps_parse(ac, args);
 	b = NULL;
 	set_idx(&a);
