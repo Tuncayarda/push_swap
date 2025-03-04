@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 19:40:43 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/04 14:40:43 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 18:02:39 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,17 @@ void	stack_free(t_stack **stack)
 
 void	set_idx(t_stack **stack)
 {
-	
+	t_stack	*current;
+	int		idx;
+
+	if (!stack || !(*stack))
+		return;
+	current = *stack;
+	idx = 0;
+	while (current)
+	{
+		current->idx = idx;
+		idx++;
+		current = current->next;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 13:45:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/04 17:10:27 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 17:58:32 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,15 @@ void	stack_add_front(t_stack **stack, t_stack *new);
 int		stack_size(t_stack *stack);
 t_stack	*stack_pop(t_stack **stack);
 void	stack_free(t_stack **stack);
+void	set_idx(t_stack **stack);
 
-int is_sorted(t_stack *stack);
-int find_min(t_stack *stack);
-void sort_three(t_stack **stack);
-void sort_four(t_stack **stack, t_stack **stack_b);
-void sort_five(t_stack **stack, t_stack **stack_b);
+int		is_sorted(t_stack *stack);
+int		find_min(t_stack *stack);
+void	sort_three(t_stack **stack);
+void	sort_four(t_stack **stack, t_stack **stack_b);
+void	sort_five(t_stack **stack, t_stack **stack_b);
+
+
+void	sort_radix(t_stack **stack_a, t_stack **stack_b);
 
 #endif
