@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:32:29 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/21 19:57:30 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 14:29:38 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_stack	*stack_new(int val)
 	new_stack = malloc(sizeof(t_stack));
 	if (!new_stack)
 		return (NULL);
+	new_stack->idx = 0;
 	new_stack->val = val;
 	new_stack->next = NULL;
 	return (new_stack);

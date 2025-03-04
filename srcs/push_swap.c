@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/25 18:25:15 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 15:39:21 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,11 @@ int main(int ac, char *args[])
 			ft_printf("%d %d\n",i, tmp->val);
 			tmp = tmp->next;
 		}
-	sa(&a, 1);
-	pb(&a, &b);
-	pb(&a, &b);
-	pb(&a, &b);
-	rr(&a, &b);
-	rrr(&a, &b);
-	sa(&a, 1);
-	pa(&a, &b);
-	pa(&a, &b);
-	pa(&a, &b);
+	ft_printf("SORTED: %d\n", is_sorted(a));
 	
+	sort_three(&a);
+
+	ft_printf("SORTED: %d\n", is_sorted(a));
 	tmp = a;
 	if (tmp)
 		for (int i = 0; i < stack_size(a); i++)

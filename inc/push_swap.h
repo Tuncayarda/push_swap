@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 13:45:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2024/12/25 16:37:55 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/04 14:50:50 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_stack
 {
 	int				val;
+	int				idx;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -43,4 +44,8 @@ void	stack_add_front(t_stack **stack, t_stack *new);
 int		stack_size(t_stack *stack);
 t_stack	*stack_pop(t_stack **stack);
 void	stack_free(t_stack **stack);
+
+int is_sorted(t_stack *stack);
+void sort_three(t_stack **stack);
+
 #endif
