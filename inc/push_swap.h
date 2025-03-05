@@ -6,14 +6,14 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 13:45:44 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/04 21:15:15 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/05 03:52:21 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdarg.h>
+# include <limits.h>
 # include "libft.h"
 # include "ft_printf.h"
 
@@ -51,6 +51,7 @@ int		find_min(t_stack *stack);
 void	sort_three(t_stack **stack);
 void	sort_four(t_stack **stack, t_stack **stack_b);
 void	sort_five(t_stack **stack, t_stack **stack_b);
+int		get_index(t_stack *stack, int value);
 
 void	sort_radix(t_stack **stack_a, t_stack **stack_b);
 

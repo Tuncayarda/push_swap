@@ -6,24 +6,11 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 14:38:46 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/04 21:05:51 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/05 03:51:40 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	is_sorted(t_stack *stack)
-{
-	if (!stack)
-		return (0);
-	while (stack->next)
-	{
-		if (stack->val > stack->next->val)
-			return (0);
-		stack = stack->next;
-	}
-	return (1);
-}
 
 int	find_min(t_stack *stack)
 {
@@ -41,15 +28,31 @@ int	find_min(t_stack *stack)
 	return (min);
 }
 
-void	sort_three(t_stack **stack)
+void sort_three(t_stack **stack)
 {
-	while (!is_sorted(*stack))
-	{
-		if ((*stack)->val > (*stack)->next->val)
-			sa(stack, 1);
-		else if ((*stack)->next->val > (*stack)->next->next->val)
-			rra(stack, 1);
-	}
+    int a;
+	int b;
+	int c;
+    
+    a = (*stack)->val;
+    b = (*stack)->next->val;
+    c = (*stack)->next->next->val;
+    if (a > b && b < c && a < c)
+        sa(stack, 1);
+    else if (a > b && b > c)
+    {
+        sa(stack, 1);
+        rra(stack, 1);
+    }
+    else if (a > b && b < c && a > c)
+        ra(stack, 1);
+    else if (a < b && b > c && a < c)
+    {
+        sa(stack, 1);
+        ra(stack, 1);
+    }
+    else if (a < b && b > c && a > c)
+        rra(stack, 1);
 }
 
 void	sort_four(t_stack **stack, t_stack **stack_b)
@@ -75,26 +78,27 @@ void	sort_four(t_stack **stack, t_stack **stack_b)
 
 void	sort_five(t_stack **stack, t_stack **stack_b)
 {
-	int	min;
 	int	size;
+	int	min;
+	int	index;
 	int	i;
-	int	j;
 
-	j = 0;
 	if (is_sorted(*stack))
 		return ;
-	while (j < 2)
+	i = 0;
+	while (i < 2)
 	{
 		size = stack_size(*stack);
 		min = find_min(*stack);
-		i = 0;
-		while ((*stack)->val != min)
-		{
-			rra(stack, 1);
-			i++;
-		}
+		index = get_index(*stack, min);
+		if (index <= size / 2)
+			while ((*stack)->val != min)
+				ra(stack, 1);
+		else
+			while ((*stack)->val != min)
+				rra(stack, 1);
 		pb(stack, stack_b);
-		j++;
+		i++;
 	}
 	sort_three(stack);
 	pa(stack, stack_b);
