@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 16:05:35 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/05 16:38:31 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/05 17:21:50 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	dup_check(t_stack *stack_a)
 {
-	t_stack *temp;
+	t_stack	*temp;
 
 	while (stack_a->next)
 	{
