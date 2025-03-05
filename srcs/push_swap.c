@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/05 16:39:48 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/05 18:12:36 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
-	if (stack_size(*stack_a) == 1)
+	if (is_sorted(stack_a))
+		;
+	else if (stack_size(*stack_a) == 1)
 		return ;
 	else if (stack_size(*stack_a) == 2)
 	{
