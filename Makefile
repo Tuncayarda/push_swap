@@ -1,30 +1,23 @@
 NAME = push_swap
-CC = cc -g
+CC = cc
 MAKEFLAGS += --no-print-directory
-CFLAGS = -fsanitize=undefined -g #-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 LIBFT = libs/libft/libft.a
 PRINTF = libs/ft_printf/libftprintf.a
 
-SRCS = $(wildcard srcs/*.c)
-
-OBJS = $(SRCS:.c=.o)
+SRCS = srcs/algorithms.c srcs/error_handler.c srcs/error_handler1.c srcs/operations1.c srcs/operations2.c srcs/operations.c srcs/parse.c srcs/push_swap.c srcs/radix.c srcs/stack_utils1.c srcs/stack_utils.c
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(PRINTF) $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) \
+$(NAME): $(LIBFT) $(PRINTF) $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) \
 	$(LIBFT) \
 	$(PRINTF) \
-	-o $(NAME)
-	@make clean 
-	@echo DONE!
-
-%.o: %.c
-	@$(CC) $(CFLAGS) -c \
 	-I./inc \
 	-I./libs/libft \
 	-I./libs/ft_printf \
-	$< -o $@
+	-o $(NAME)
+	@echo DONE!
 
 $(LIBFT):
 	@make -sC libs/libft

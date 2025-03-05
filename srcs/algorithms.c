@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 14:38:46 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/05 03:51:40 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/05 15:56:20 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,31 @@ int	find_min(t_stack *stack)
 	return (min);
 }
 
-void sort_three(t_stack **stack)
+void	sort_three(t_stack **stack)
 {
-    int a;
-	int b;
-	int c;
-    
-    a = (*stack)->val;
-    b = (*stack)->next->val;
-    c = (*stack)->next->next->val;
-    if (a > b && b < c && a < c)
-        sa(stack, 1);
-    else if (a > b && b > c)
-    {
-        sa(stack, 1);
-        rra(stack, 1);
-    }
-    else if (a > b && b < c && a > c)
-        ra(stack, 1);
-    else if (a < b && b > c && a < c)
-    {
-        sa(stack, 1);
-        ra(stack, 1);
-    }
-    else if (a < b && b > c && a > c)
-        rra(stack, 1);
+	int	a;
+	int	b;
+	int	c;
+
+	a = (*stack)->val;
+	b = (*stack)->next->val;
+	c = (*stack)->next->next->val;
+	if (a > b && b < c && a < c)
+		sa(stack, 1);
+	else if (a > b && b > c)
+	{
+		sa(stack, 1);
+		rra(stack, 1);
+	}
+	else if (a > b && b < c && a > c)
+		ra(stack, 1);
+	else if (a < b && b > c && a < c)
+	{
+		sa(stack, 1);
+		ra(stack, 1);
+	}
+	else if (a < b && b > c && a > c)
+		rra(stack, 1);
 }
 
 void	sort_four(t_stack **stack, t_stack **stack_b)

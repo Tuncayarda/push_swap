@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 19:40:43 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/05 03:51:10 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/05 15:57:17 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,9 @@ int	is_sorted(t_stack *stack)
 
 int	get_index(t_stack *stack, int value)
 {
-	int index = 0;
+	int	index;
+
+	index = 0;
 	while (stack)
 	{
 		if (stack->val == value)

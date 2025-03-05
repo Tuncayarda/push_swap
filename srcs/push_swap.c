@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/05 03:49:16 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/05 16:39:48 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ int	main(int ac, char *args[])
 
 	check_errors(ac, args);
 	a = ps_parse(ac, args);
+	if (dup_check(a) == 1)
+	{
+		stack_free(&a);
+		terminate_prog(NULL);
+	}
 	b = NULL;
 	set_idx(&a);
 	sort(&a, &b);
