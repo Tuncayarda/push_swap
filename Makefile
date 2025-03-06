@@ -5,7 +5,11 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT = libs/libft/libft.a
 PRINTF = libs/ft_printf/libftprintf.a
 
-SRCS = srcs/algorithms.c srcs/error_handler.c srcs/error_handler1.c srcs/operations1.c srcs/operations2.c srcs/operations.c srcs/parse.c srcs/push_swap.c srcs/radix.c srcs/stack_utils1.c srcs/stack_utils.c
+SRCS =	src/algorithms.c src/error_handler.c \
+		src/error_handler1.c src/operations1.c \
+		src/operations2.c src/operations.c \
+		src/parse.c src/push_swap.c \
+		src/radix.c src/stack_utils1.c src/stack_utils.c
 
 all: $(NAME)
 
