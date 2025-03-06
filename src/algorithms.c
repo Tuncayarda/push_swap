@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 14:38:46 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/05 18:11:38 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/07 00:16:30 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,12 @@ void	sort_three(t_stack **stack)
 void	sort_four(t_stack **stack, t_stack **stack_b)
 {
 	int	min;
-	int	size;
-	int	i;
 
 	if (is_sorted(*stack))
 		return ;
-	size = stack_size(*stack);
 	min = find_min(*stack);
-	i = 0;
 	while ((*stack)->val != min)
-	{
 		rra(stack, 1);
-		i++;
-	}
 	pb(stack, stack_b);
 	sort_three(stack);
 	pa(stack, stack_b);

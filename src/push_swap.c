@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:34:06 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/06 22:44:26 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/07 00:16:56 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
-	if (is_sorted(stack_a))
+	if (is_sorted(*stack_a))
 		;
 	else if (stack_size(*stack_a) == 1)
 		return ;
@@ -37,7 +37,6 @@ int	main(int ac, char *args[])
 {
 	t_stack	*a;
 	t_stack	*b;
-	t_stack	*tmp;
 
 	check_errors(ac, args);
 	a = ps_parse(ac, args);
@@ -49,6 +48,5 @@ int	main(int ac, char *args[])
 	b = NULL;
 	set_idx(&a);
 	sort(&a, &b);
-	tmp = a;
 	stack_free(&a);
 }
