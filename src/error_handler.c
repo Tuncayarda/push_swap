@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 20:16:52 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/05 16:42:05 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/07 21:22:50 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	check_errors(int ac, char **args)
 		i = 0;
 		values = ft_split(args[arg], ' ');
 		if (!values || !values[i])
-			terminate_prog(NULL);
+			terminate_prog(values);
 		while (values[i])
 		{
 			if (!values[i] || !is_numeric(values[i])
