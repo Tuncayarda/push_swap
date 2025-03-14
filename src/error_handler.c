@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 20:16:52 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/07 21:24:50 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/14 23:33:20 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,9 +103,10 @@ void	check_errors(int ac, char **args)
 			if (!values[i] || !is_numeric(values[i])
 				|| !is_int_range(values[i]) || ft_strlen(values[i]) > 11)
 				terminate_prog(values);
-			free(values[i]);
 			i++;
 		}
+		while (values[i])
+			free(values[i--]);
 		free(values);
 		arg++;
 	}
