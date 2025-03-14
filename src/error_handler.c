@@ -6,7 +6,7 @@
 /*   By: tuaydin <tuaydin@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 20:16:52 by tuaydin           #+#    #+#             */
-/*   Updated: 2025/03/14 23:33:20 by tuaydin          ###   ########.fr       */
+/*   Updated: 2025/03/15 00:31:56 by tuaydin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,8 @@ int	is_int_range(char *str)
 	return (1);
 }
 
-void	terminate_prog(char **set_free)
+void	terminate_prog(char **set_free, int i)
 {
-	int	i;
-
-	i = 0;
 	if (set_free)
 	{
 		while (set_free[i])
@@ -90,23 +87,22 @@ void	check_errors(int ac, char **args)
 	char	**values;
 
 	if (ac < 2)
-		terminate_prog(NULL);
+		terminate_prog(NULL, 0);
 	arg = 1;
 	while (arg < ac)
 	{
 		i = 0;
 		values = ft_split(args[arg], ' ');
 		if (!values || !values[i])
-			terminate_prog(values);
+			terminate_prog(values, 0);
 		while (values[i])
 		{
 			if (!values[i] || !is_numeric(values[i])
 				|| !is_int_range(values[i]) || ft_strlen(values[i]) > 11)
-				terminate_prog(values);
+				terminate_prog(values, i);
+				free(values[i]);
 			i++;
 		}
-		while (values[i])
-			free(values[i--]);
 		free(values);
 		arg++;
 	}
